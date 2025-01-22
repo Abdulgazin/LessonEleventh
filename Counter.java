@@ -2,8 +2,13 @@ package com.walking.lessonEleventh.counterAggregation;
 
 public class Counter {
     public final String counterName;
-    public int counterValue;
+    public static int counterValue;
     public final String unitMeasurement;
+
+    @Override
+    public String toString() {
+        return " "+counterName+" "+counterValue+" "+unitMeasurement;
+    }
 
     public int getCounterValue() {
         return counterValue;
