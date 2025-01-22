@@ -1,14 +1,18 @@
 package com.walking.lessonEleventh.counterAggregation;
 
-class CounterService {
-    private Counter Counters;
+import java.util.Arrays;
 
-    public CounterService(Counter Counters) {
+import com.walking.lessonEleventh.counterAggregation.Main;
+import com.walking.lessonEleventh.counterAggregation.Counter;
+
+public class CounterService {
+    static Counter[] Counters;
+
+    public CounterService(Counter[] Counters) {
         this.Counters = Counters;
     }
-
-    public static void printArray() {
-            System.out.println();
-        }
-
+    public int increaseValue(int value) {
+        Counter.counterValue += value;
+        return Counter.counterValue;
+    }
 }
